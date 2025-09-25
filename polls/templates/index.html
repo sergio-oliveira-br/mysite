@@ -8,5 +8,13 @@
 </head>
 <body>
     {{name}}
+
+    <form action="/save-question/" method="post">
+        {% csrf_token %}
+        <label for="question_text_id">Question</label><br>
+        <input type="text" id="question_text_id" name="question_text" required><br>
+        <br>
+        <input type="submit" value="Save">
+    </form>
 </body>
 </html>
