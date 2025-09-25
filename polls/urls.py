@@ -7,7 +7,6 @@ app_name = 'polls'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('hello/', views.hello, name='hello'),
     path('save-question/', views.save_question, name='save-question')
 
 ]
