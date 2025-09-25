@@ -20,15 +20,32 @@
 
 </head>
 <body>
-    {{name}}
+    <header>
+        <h3 class="text-center">This is my first Django app, part 1</h3>
+    </header>
 
-    <form action="/save-question/" method="post">
-        {% csrf_token %}
-        <label for="question_text_id">Question</label><br>
-        <input type="text" id="question_text_id" name="question_text" required><br>
-        <br>
-        <input type="submit" value="Save">
-    </form>
+    <main>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="card mt-5">
+                <h5 class="card-header">Question</h5>
+
+                <div class="card-body">
+                    <h5 class="card-title">Save Your Question</h5>
+
+                    <p class="card-text">This form will capture a question and save in our database.</p>
+
+                     <form action="/save-question/" method="post">
+                        {% csrf_token %}
+                        <label for="question_text_id">Please enter your question</label><br>
+                        <input type="text" class="form-control" id="question_text_id" name="question_text" required><br>
+                        <input class="btn btn-primary" type="submit" value="Save">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
 
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
