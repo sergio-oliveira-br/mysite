@@ -12,7 +12,5 @@ def index(request):
     return render(request, 'index.html', {'display_question': display_question})
 
 def save_question(request):
-    question = Question(question_text=request.POST['question_text'],)
-
-    Question.objects.create(question_text = question, pub_date = datetime.now())
+    Question.objects.create(question_text=request.POST['question_text'], pub_date = datetime.now())
     return redirect('polls:index')
