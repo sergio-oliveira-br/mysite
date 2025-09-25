@@ -44,6 +44,34 @@
                 </div>
             </div>
         </div>
+
+        <div class="card mt-5 mx-5">
+            <div class="header"></div>
+            <div class="card-body">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Text</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if display_question %}
+                            {% for question in display_question %}
+                                <tr>
+                                    <th>{{ question.id }}</th>
+                                    <td>{{ question.question_text }}</td>
+                                    <td>{{ question.pub_date }}
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </main>
 
 
