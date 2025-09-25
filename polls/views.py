@@ -8,10 +8,7 @@ from .models import Question
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
-
-def hello(request):
-    return render(request, 'index.html', {'name': 'Sergio'})
+    return render(request, 'index.html')
 
 def save_question(request):
     question = Question(question_text=request.POST['question_text'],)
