@@ -9,7 +9,7 @@ from .models import Question
 # Create your views here.
 def index(request):
     display_question = Question.objects.all()
-    return render(request, 'index.html', {'display_question': display_question} )
+    return render(request, 'index.html', {'display_question': display_question})
 
 def save_question(request):
     question = Question(question_text=request.POST['question_text'],)
